@@ -1,0 +1,481 @@
+/* ********* BODY *********** */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    background-color: beige;
+    color: #333;
+    line-height: 1.6;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+h1,
+h2 {
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+
+/* ********** SOME UTILITIES CLASSES *********** */
+
+.container {
+    max-width: 1100px;
+    overflow: auto;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.navbar .flex {
+    justify-content: space-between;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.card {
+    background-color: transparent;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    cursor: pointer;
+    background-color: transparent;
+    color: #00b6ed;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    transform: scale(0.98);
+}
+
+
+/* ******* NAVBAR SECTION ********* */
+
+.navbar {
+    height: 70px;
+}
+
+.navbar i {
+    margin: 0 -20px;
+}
+
+.navbar .logo {
+    margin-left: -164px;
+    color: #abb1ac;
+    font-weight: 500;
+    text-shadow: -1px 1px rebeccapurple;
+}
+
+.navbar .logo:hover {
+    cursor: pointer;
+}
+
+.navbar ul {
+    display: flex;
+    font-family: cursive;
+}
+
+.navbar a {
+    color: black;
+    padding: 10px 20px;
+    border-radius: 35px;
+}
+
+.navbar a:hover {
+    background-color: #cacecfea;
+    border: 2px solid #cacecfea;
+}
+
+
+/* ******** SHOWCASE SECTION ********** */
+
+.showcase {
+    position: relative;
+}
+
+.showcase::before {
+    content: " ";
+    background: url('images/showcase-bg.jpg') no-repeat center center/cover;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+.showcase .grid {
+    grid-template-columns: 55% 45%;
+    grid-gap: 60px;
+    overflow: visible;
+}
+
+.showcase .showcase-text {
+    margin: 74px 26px;
+    position: relative;
+}
+
+.showcase .showcase-text h1 {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.showcase-text p {
+    margin: 20px 0;
+}
+
+.showcase-text .btn {
+    background-color: #fff;
+    border: 1px solid #333;
+    color: black;
+}
+
+.showcase-form {
+    position: relative;
+    top: 32px;
+    right: 30px;
+    height: 390px;
+    width: 350px;
+    padding: 40px;
+    z-index: 100;
+    justify-self: flex-end;
+}
+
+.showcase-form p {
+    margin-top: -9px;
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: -6px;
+}
+
+.showcase-form h2 {
+    text-align: center;
+}
+
+.showcase-form .btn-primary {
+    width: 80%;
+    height: 30px;
+    padding: 7px 0;
+    font-weight: 600;
+    background-color: white;
+    color: lightslategray;
+    border: 2px solid lightslategray;
+    margin-left: 28px;
+    border-radius: 20px;
+}
+
+.showcase-form .form-control {
+    margin: 30px 0;
+}
+
+.showcase-form input[type='text'],
+.showcase-form input[type='number'] {
+    border: 0;
+    border-radius: 30px;
+    width: 100%;
+    padding: 4px;
+    font-size: 16px;
+}
+
+.showcase-form input:focus {
+    outline: none;
+}
+
+.showcase::after {
+    content: '';
+    position: absolute;
+    height: 100px;
+    bottom: -182px;
+    right: 0;
+    left: 0;
+    background-color: beige;
+    transform: skewY(-4deg);
+    -webkit-transform: skewY(-4deg);
+    -moz-transform: skewY(-4deg);
+    -ms-transform: skewY(-4deg);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+
+/* ******** CONTRACTS SECTION ****** */
+
+.contracts {
+    padding-top: 210px;
+    text-align: center;
+}
+
+.contracts img {
+    width: 165px;
+    height: 102px;
+}
+
+.contracts h3 {
+    display: inline-block;
+    font-size: 38px;
+    font-weight: 600;
+    text-shadow: 0 7px 10px;
+}
+
+.contracts .grid p {
+    margin-top: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: #cc9544;
+}
+
+.contracts .card {
+    height: 135px;
+    transition: transform 0.2s ease-in;
+}
+
+.contracts .card:hover {
+    transform: translateY(-15px);
+}
+
+.contracts .grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+    height: 203px;
+    overflow: hidden;
+}
+
+
+/************* ABOUT US SECTION *********/
+
+.about-us {
+    width: 100%;
+    height: 609px;
+    margin-top: 100px;
+    position: relative;
+}
+
+.about-us::before {
+    content: " ";
+    background: url('images/about-us-bg.jpg') no-repeat center center/cover;
+    position: absolute;
+    width: 100%;
+    height: 107vh;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+.about-us .main-container {
+    display: inline-block;
+    height: 606px;
+}
+
+.about-us .container-1 {
+    margin-left: 54px;
+    display: block;
+    width: 60%;
+    display: block;
+    min-height: 90vh;
+}
+
+.about-us .icons-section {
+    display: flex;
+    margin-top: 34px;
+}
+
+.about-us .icons-section .icon {
+    margin: 13px 20px;
+    padding: 7px 0;
+    width: 226px;
+    height: 151px;
+    text-align: center;
+    display: block;
+    border-radius: 15px;
+}
+
+.about-us .icons-section .card {
+    background-color: #00b6ed;
+    color: #333;
+    box-shadow: 0 13px 15px rgba(0, 0, 0, 0.34);
+}
+
+.about-us .icons-section .icon h3 {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.about-us .icons-section .icon p {
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.about-us .icons-section .icon .line-height-issue {
+    margin-top: 0;
+}
+
+.about-us .text-section {
+    width: 100%;
+    min-height: 270px;
+    min-width: none;
+}
+
+.container-1 .heading-section {
+    text-align: center;
+    margin-top: 33px;
+}
+
+.container-1 .heading-section h1 {
+    font-size: 44px;
+    font-family: serif;
+    font-weight: 600;
+    text-shadow: 0 5px 7px;
+    display: inline;
+}
+
+.container-1 .text-section h3 {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.about-us .text-section p {
+    padding: 36px 17px 0px;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.about-us .button-section {
+    text-align: left;
+}
+
+.about-us .button-section button {
+    font-size: 15px;
+    padding: 4px 31px;
+    border-radius: 5px;
+    margin: 36px 19px 0;
+    font-weight: 600;
+}
+
+.about-us .button-section button:hover {
+    transform: scale(0.98);
+}
+
+.about-us .container-2 {
+    float: right;
+    width: 28%;
+    height: 552px;
+    margin-top: -168px;
+    position: relative;
+    top: -412px;
+    right: 81px;
+}
+
+.about-us .container-2 img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 225px;
+}
+
+
+/* ************** FOOTER SECTION ********* */
+
+.footer-container {
+    margin-top: 160px;
+    text-align: center;
+    background-color: #040404d1;
+}
+
+.footer-container h3 {
+    color: white;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.footer .social-icons div {
+    background-color: white;
+    border-radius: 25px;
+    margin: 10px 15px
+}
+
+.footer .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+}
+
+.footer .social-icons a {
+    margin: 0px 28px;
+}
+
+.social-icons .fa-facebook {
+    color: #3b5999;
+    margin: 8px 9px;
+}
+
+.social-icons .fa-instagram {
+    color: #e4405f;
+    margin: 8px 9px;
+}
+
+.social-icons .fa-twitter {
+    color: #55acee;
+    margin: 8px 9px;
+}
+
+.social-icons .fa-quora {
+    color: #b92b27;
+    margin: 8px 9px;
+}
+
+.social-icons .fa-linkedin {
+    color: #0077B5;
+    margin: 8px 9px;
+}
+
+.social-icons i:hover {
+    transform: scale(1.3);
+}
+
+
+/* .about-us,
+.about-us .main-container,
+.about-us .container-1,
+.about-us .container-2,
+.about-us .container-1 .heading-section,
+.about-us .container-1 .text-section,
+.about-us .container-1 .text-section p,
+.about-us .container-1 .text-section h3,
+.about-us .container-1 .button-section,
+.about-us .icons-section,
+.about-us .icons-section .icon,
+.about-us button {
+    border: 2px solid black;
+} */
